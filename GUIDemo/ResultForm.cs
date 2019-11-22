@@ -10,13 +10,13 @@ using System.Windows.Forms;
 
 namespace GUIDemo
 {
-    public partial class form2Panel : Form
+    public partial class ResultForm : Form
     {
-        Form1 f1;
+        MainForm mainForm;
         private HelpForm helpForm;
-        private string result = null;
+        private string result = string.Empty;
 
-        public form2Panel()
+        public ResultForm()
         {
             InitializeComponent();
             CenterToScreen();
@@ -29,24 +29,24 @@ namespace GUIDemo
 
         private void tRYAGAINToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            f1 = new Form1();
+            mainForm = new MainForm();
             this.Close();
-            f1.Show();
+            mainForm.Show();
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            bmiResultLabel.Text = Form1.bmi;
+            bmiResultLabel.Text = MainForm.bmi;
 
-            if(Form1.age < 20)
+            if(MainForm.age < 20)
             {
-                resultLabel.Text = showResultChild();
+                resultLabel.Text = showResultForChild();
             }
-            else if (Form1.age >= 20 )
-                resultLabel.Text = showResultAdult();
+            else if (MainForm.age >= 20 )
+                resultLabel.Text = showResultForAdult();
         }
 
-        private string showResultAdult()
+        private string showResultForAdult()
         {
             double resultBmi = double.Parse(bmiResultLabel.Text);
             if (resultBmi <= 18.50)
@@ -72,7 +72,7 @@ namespace GUIDemo
             return result;
         }
 
-        private string showResultChild()
+        private string showResultForChild()
         {
             double resultBmi = double.Parse(bmiResultLabel.Text);
             if (resultBmi <= 5)

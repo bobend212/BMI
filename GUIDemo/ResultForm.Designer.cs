@@ -1,6 +1,6 @@
 ﻿namespace GUIDemo
 {
-    partial class form2Panel
+    partial class ResultForm
     {
         /// <summary>
         /// Required designer variable.
@@ -114,7 +114,7 @@
             this.resultBoxGroup.TabStop = false;
             this.resultBoxGroup.Text = "Your BMI";
             // 
-            // form2Panel
+            // ResultForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -126,7 +126,7 @@
             this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.menuForm2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "form2Panel";
+            this.Name = "ResultForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form2";
             this.TransparencyKey = System.Drawing.Color.White;

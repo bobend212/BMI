@@ -10,17 +10,16 @@ using System.Windows.Forms;
 
 namespace GUIDemo
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        double height;
-        double weight;
+        double height, weight;
         private static double bmiDouble;
         public static string bmi;
         public static int age;
-        private form2Panel f2;
+        private ResultForm resultForm;
         private HelpForm helpForm;
 
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
             CenterToScreen();
@@ -36,9 +35,9 @@ namespace GUIDemo
             try
             {
                 calculateBMI();
-                f2 = new form2Panel();
+                resultForm = new ResultForm();
                 this.Hide();
-                f2.Show();
+                resultForm.Show();
 
             } catch (FormatException)
             {

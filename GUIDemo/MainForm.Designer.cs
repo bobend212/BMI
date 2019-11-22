@@ -1,6 +1,6 @@
 ﻿namespace GUIDemo
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Required designer variable.
@@ -175,7 +175,7 @@
             this.maskTextHeight.TabIndex = 11;
             this.maskTextHeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -189,7 +189,7 @@
             this.Controls.Add(this.menuForm1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MainMenuStrip = this.menuForm1;
-            this.Name = "Form1";
+            this.Name = "MainForm";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BMI";
